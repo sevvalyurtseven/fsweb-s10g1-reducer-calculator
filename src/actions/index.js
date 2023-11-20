@@ -5,6 +5,12 @@ export const CHANGE_OPERATION = "CHANGE_OPERATION";
 
 export const CLEAR_DISPLAY = "Ekrandaki Degeri Sıfırlar"
 
+export const MEMORY_ADD = "Memory'e Totali Ekler"
+
+export const memoryAdd = () => {
+  return ({ type: MEMORY_ADD });
+};
+
 export const addOne = () => {
   return ({ type: ADD_ONE });
 };

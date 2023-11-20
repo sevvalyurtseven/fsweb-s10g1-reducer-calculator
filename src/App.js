@@ -4,7 +4,7 @@ import { useReducer } from 'react';
 import TotalDisplay from './components/TotalDisplay';
 import CalcButton from './components/CalcButton';
 import reducer, {initialState} from "./reducers";
-import {addOne, applyNumber, changeOperation, clearDisplay} from "./actions";
+import {addOne, applyNumber, changeOperation, clearDisplay, memoryAdd} from "./actions";
 
 function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
@@ -25,6 +25,10 @@ function App() {
     dispatch(clearDisplay());
   }
 
+  const handleMemoryAdd = () => {
+    dispatch(memoryAdd());
+  }
+
   return (
     <div className="App">
       <nav className="navbar navbar-dark bg-dark">
@@ -42,7 +46,7 @@ function App() {
             </div>
 
             <div className="row">
-              <CalcButton value={"M+"} />
+              <CalcButton value={"M+"} onClick = {handleMemoryAdd} />
               <CalcButton value={"MR"} />
               <CalcButton value={"MC"} />
             </div>
