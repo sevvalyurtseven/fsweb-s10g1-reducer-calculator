@@ -11,7 +11,8 @@ function App() {
   console.log(state);
 
   const clickHandler = () => {
-    dispatch(addOne());
+    dispatch(applyNumber(1));
+    //dispatch(addOne());
   }
 
   return (
