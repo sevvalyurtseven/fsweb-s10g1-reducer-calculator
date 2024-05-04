@@ -92,13 +92,13 @@ function App() {
 
             <div className="row">
               <CalcButton value={0} onClick={clickHandler} />
-              <CalcButton value={"="} />
+              <CalcButton value={"+"} onClick={handleOperationChange} />
               <CalcButton value={"*"} onClick={handleOperationChange} />
             </div>
 
             <div className="row">
-              <CalcButton value={"*"} onClick={handleOperationChange} />
               <CalcButton value={"-"} onClick={handleOperationChange} />
+              <CalcButton value={"="} onClick={handleOperationChange} />
               <CalcButton value={"CE"} onClick={handleClearDisplay} />
             </div>
           </form>
